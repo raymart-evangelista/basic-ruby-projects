@@ -5,16 +5,8 @@ def substrings(string, dictionary)
   # use the dictionary to match words that can be found in the word
   dictionary.select do |word|
     if string.match?(word)
-
       # scan for how many instances the word pops up in the string and put the number of instances in the has
       found_substrings[word] = string.scan(word).size
-      
-      # # if the matched word is already hashed, add 1 to the count else we start a new count
-      # if found_substrings.has_key?(word)
-      #   found_substrings[word] += 1
-      # else
-      #   found_substrings[word] = 1
-      # end
     end
   end
   # return found_substrings hash
